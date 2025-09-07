@@ -1,0 +1,199 @@
+/* -------------------------
+   Global Reset
+-------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* -------------------------
+   Utility Classes
+-------------------------- */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* -------------------------
+   Header
+-------------------------- */
+.site-header {
+  background: #0a1f44;
+  padding: 1rem 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 140px;
+  height: auto;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  color: #f2c94c;
+}
+
+/* -------------------------
+   Banner
+-------------------------- */
+.banner {
+  position: relative;
+  height: 70vh;
+  background: url("banner.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 31, 68, 0.6);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  max-width: 700px;
+  padding: 0 1rem;
+}
+
+.banner h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #f2c94c;
+  color: #0a1f44;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #d4a80c;
+  transform: translateY(-3px);
+}
+
+/* -------------------------
+   Features
+-------------------------- */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+.feature-card {
+  text-align: center;
+  background: #fafafa;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.feature-card h2 {
+  margin-bottom: 0.75rem;
+  color: #0a1f44;
+  font-size: 1.5rem;
+}
+
+/* -------------------------
+   Footer
+-------------------------- */
+.site-footer {
+  background: #0a1f44;
+  color: #fff;
+  padding: 1.5rem 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-footer img {
+  width: 90px;
+  height: auto;
+}
+
+.footer-right p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* -------------------------
+   Responsiveness
+-------------------------- */
+@media (max-width: 768px) {
+  .nav-list {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .banner {
+    height: 60vh;
+  }
+
+  .features {
+    padding: 2rem 0;
+  }
+}
